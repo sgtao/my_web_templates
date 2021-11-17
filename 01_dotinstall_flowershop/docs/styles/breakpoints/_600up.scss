@@ -1,0 +1,14 @@
+/* medium screen */
+// header
+header {
+  .container {
+    & > .shopTitle {
+      opacity: 1;
+      transition: opacity .5s;
+    }
+  }
+}
+// products section
+.products li {
+  width: calc((100% - 32px) / 3);
+}

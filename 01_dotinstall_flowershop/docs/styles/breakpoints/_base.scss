@@ -1,0 +1,183 @@
+/******************************************************************
+Stylesheet: ベーススタイル
+******************************************************************/
+/* font setting */
+body {
+  margin: 0;
+  font-family: "Kameron", "Noto Sans JP", sans-serif;
+}
+.font-sm {
+  font-size: 14px;
+}
+.font-md {
+  font-size: 17px;
+}
+.font-lr {
+  font-size: 17px;
+}
+.font-lg {
+  font-size: 25px;
+}
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+.mb-lg {
+  margin-bottom: 80px !important;
+}
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+.pb-lg {
+  padding-bottom: 80px !important;
+}
+/* common */
+h1,
+h2 {
+  margin: 0;
+  font-weight: normal;
+}
+p {
+  margin: 0;
+}
+img {
+  vertical-align: bottom;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+/* header */
+header {
+  padding: 8px 0;
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  img {
+    width: 120px;
+    height: 48px;
+  }
+  .shopTitle {
+    display: block;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  ul {
+    display: flex;
+    & > li {
+      a {
+        display: flex;
+        flex-direction: column;
+        font-size: 24px;
+        text-align: center;
+        i {
+          font-size: 36px;
+        }
+      }
+    }
+    & > li + li {
+      margin-left: 8px;
+    }
+  }
+}
+/* main */
+main {
+  width: 100%;
+  & > section + section {
+    margin: 32px 0 0 0 auto;
+    padding: 32px 0 0 0;
+  }
+  .section-title {
+    @extend .font-lg;
+    text-align: center;
+    font-weight: bold;
+    color: #008;
+    // font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+  .section-title::after {
+    @extend .font-md;
+    content: attr(data-subtitle);
+    display: block;
+    color: #888;
+    // font-size: 16px;
+  }  
+  // news section
+  .news {
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: left;
+  }
+  // products section
+  .products {
+    width: 100%;
+    padding: 80px 0;
+    margin: 0 10px auto;
+    ul {
+      margin: 24px auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      & > li {
+        width: 45%;
+        img {
+          height: 200px;
+          width: 100%;
+          object-fit: cover;
+        }
+        h2 {
+          font-size: 16px;
+          margin-top: 8px;
+        }
+        /* change style from inline-block to block for hover */
+        a {
+          display: block;
+        }
+      }
+    }
+    .more {
+      display: block;
+      width: 70%;
+      line-height: 48px;
+      border: 2px solid #333;
+      text-align: center;
+      margin: 32px auto 0;
+      transition: all 0.5s;
+      &:hover {
+        color: #bbb;
+        background-color: #333;
+      }
+    }
+  }
+}
+/* fotter */
+footer {
+  background: #4c4948;
+  padding: 16px 0;
+  color: #eee;
+  & > .container {
+    display: flex;
+    justify-content: space-between; // <- ２つなので、左右にばらける
+    align-items: center; // <- 高さは中央揃え
+    & > ul {
+      display: flex;
+      align-items: center; // <- 高さは中央揃え
+      li {
+        margin: 0 10px auto;
+      }
+    }
+  }
+}
