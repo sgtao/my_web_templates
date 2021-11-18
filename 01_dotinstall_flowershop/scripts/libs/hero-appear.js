@@ -1,5 +1,5 @@
 // hero appear
-function hero_appear() {
+function hero_appear(el) {
   function play() {
     setTimeout(() => {
       images[currentIndex].classList.remove('current');
@@ -13,6 +13,7 @@ function hero_appear() {
     }, 5000);
   }
   let currentIndex = 0;
-  const images = document.querySelectorAll('.hero img');
+  let target_elms = el + ' img';
+  const images = document.querySelectorAll(target_elms);
   play(); // 初回の呼び出し
 }

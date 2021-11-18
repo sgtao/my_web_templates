@@ -2,5 +2,5 @@
 
 // after Load contents
 document.addEventListener('DOMContentLoaded', function () {
-  hero_appear();
+  hero_appear('.hero');
 });
