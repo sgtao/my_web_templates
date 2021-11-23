@@ -1,0 +1,10 @@
+// Intersection Observer appear
+.isob_elm {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all .7s;
+  &.appear {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

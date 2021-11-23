@@ -5,6 +5,7 @@ Stylesheet: ベーススタイル
 body {
   margin: 0;
   font-family: "Kameron", "Noto Sans JP", sans-serif;
+  z-index: 1;
 }
 .font-sm {
   font-size: 14px;
@@ -133,6 +134,7 @@ main {
       gap: 16px;
       & > li {
         width: 45%;
+        position: relative;
         img {
           height: 200px;
           width: 100%;
@@ -142,9 +144,8 @@ main {
           font-size: 16px;
           margin-top: 8px;
         }
-        /* change style from inline-block to block for hover */
-        a {
-          display: block;
+        &:hover {
+          cursor: pointer;
         }
       }
     }
@@ -162,6 +163,17 @@ main {
       }
     }
   }
+}
+.popup {
+  display: block;
+  position: absolute;
+  background-color:black;
+  opacity: 0.8;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  top: 0;
+  left: 0;
 }
 /* fotter */
 footer {

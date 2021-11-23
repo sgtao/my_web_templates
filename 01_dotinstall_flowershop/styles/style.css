@@ -11,13 +11,22 @@
   .hero img.current {
     opacity: 1; }
 
+.isob_elm {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all .7s; }
+  .isob_elm.appear {
+    opacity: 1;
+    transform: translateY(0); }
+
 /******************************************************************
 Stylesheet: ベーススタイル
 ******************************************************************/
 /* font setting */
 body {
   margin: 0;
-  font-family: "Kameron", "Noto Sans JP", sans-serif; }
+  font-family: "Kameron", "Noto Sans JP", sans-serif;
+  z-index: 1; }
 
 .font-sm {
   font-size: 14px; }
@@ -126,7 +135,7 @@ main {
       gap: 16px; }
       main .products ul > li {
         width: 45%;
-        /* change style from inline-block to block for hover */ }
+        position: relative; }
         main .products ul > li img {
           height: 200px;
           width: 100%;
@@ -134,8 +143,8 @@ main {
         main .products ul > li h2 {
           font-size: 16px;
           margin-top: 8px; }
-        main .products ul > li a {
-          display: block; }
+        main .products ul > li:hover {
+          cursor: pointer; }
     main .products .more {
       display: block;
       width: 70%;
@@ -147,6 +156,17 @@ main {
       main .products .more:hover {
         color: #bbb;
         background-color: #333; }
+
+.popup {
+  display: block;
+  position: absolute;
+  background-color: black;
+  opacity: 0.8;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  top: 0;
+  left: 0; }
 
 /* fotter */
 footer {
