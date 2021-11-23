@@ -164,16 +164,65 @@ main {
     }
   }
 }
+// products section for popup
 .popup {
-  display: block;
-  position: absolute;
-  background-color:black;
-  opacity: 0.8;
-  width: 100vw;
-  height: 100vh;
-  z-index: 9999;
-  top: 0;
-  left: 0;
+  display: relative;
+  .close {
+    /* カーソルが重なると変化させる */
+    cursor: pointer;
+    /* ボタンの大きさは幅200pxにして、文字は中央に配置 */
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    padding: 12px 0;
+    /* ボタンは画面の中央に置くため、marginを指定 */
+    margin: 16px auto 0;
+  }
+  .mask {
+    /* うっすらと暗くする */
+    background: rgba(0, 0, 0, 0.4);
+    /* 画面いっぱいに表示したいので、positionはfixed、位置を0と設定 */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    /* 重ね合わせの優先を、body -> mask -> modalの順にする */
+    /* maskは１。modalを２。にする */
+    z-index: 1;
+  }
+  .modal {
+    /* モーダルウィンドウのスタイリング */
+    background: #fff;
+    max-width: 500px;
+    width: 80%;
+    padding: 20px;
+    border-radius: 4px;
+    /* 配置は絶対指定を利用 */
+    // position: absolute;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    /* アニメーションの効果をつける */
+    transition: transform .4s;
+    /* 重ね合わせの優先を、body -> mask -> modalの順にする */
+    /* maskは１。modalを２。にする */
+    z-index: 2;
+    img {
+      width: 80%;
+    }
+  }
+  /* マスクを隠すスタイル */
+  .mask.hidden {
+    display: none;
+  }
+  /* モーダルウィンドウを隠すスタイル（上に隠す） */
+  .modal.hidden {
+    transform: translateY(-800px);
+  }
 }
 /* fotter */
 footer {
