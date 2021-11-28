@@ -1,0 +1,124 @@
+@charset "UTF-8";
+/* 背景を position:relative + bg-attachment: fiexedで指定 */
+.cd-fixed-bg {
+  position: relative;
+  min-height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 2; }
+
+/* div要素ごとに背景を変化させる */
+.cd-fixed-bg.cd-bg-1 {
+  background-image: url("../images/img01.png"); }
+
+.cd-fixed-bg.cd-bg-2 {
+  background-image: url("../images/img02.png"); }
+
+.cd-fixed-bg.cd-bg-3 {
+  background-image: url("../images/img03.png"); }
+
+.cd-fixed-bg.cd-bg-4 {
+  background-image: url("../images/img04.png"); }
+
+.cd-fixed-bg.cd-bg-5 {
+  background-image: url("../images/img05.png"); }
+
+/* 背景画像のdiv要素の間にdiv要素を入れる */
+.cd-fixed-bg.cd-between {
+  color: #333;
+  height: 50%;
+  min-height: 50%; }
+
+/* CSS スマートフォンに対応 */
+@media screen and (max-width: 640px) {
+  .cd-fixed-bg {
+    background-size: cover;
+    background-attachment: scroll; } }
+/* pagetop_styles.css */
+/* refer : https://rfs.jp/sb/javascript/js-lab/brn-backtotop.html */
+#page_top {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  background-color: #004b4b;
+  border-radius: 50%;
+  display: block;
+  z-index: 10;
+  opacity: 0;
+  transition: all .5s; }
+
+#page_top p {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-decoration: underline;
+  color: white;
+  top: 10px;
+  /* text-align: center; */
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  line-height: 0; }
+
+#page_top.fadein {
+  opacity: 0.6; }
+
+#page_top.fadein:hover {
+  opacity: 0.9;
+  cursor: pointer; }
+
+body,
+html {
+  font-family: "Arial", "メイリオ";
+  height: 100%;
+  margin: 0 auto; }
+
+.container {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto 0; }
+
+header {
+  color: #eee;
+  background-color: #004b4b;
+  display: block;
+  min-height: 150px; }
+
+main {
+  height: 100%;
+  min-height: 100%; }
+  main div {
+    box-sizing: border-box;
+    color: #FFF;
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    padding: 5%; }
+  main h2 {
+    font-family: 'Impact', "Arial";
+    font-size: 55px;
+    text-align: center; }
+  main h3 {
+    font-family: "Arial", "メイリオ";
+    font-size: 32px;
+    text-align: center; }
+
+footer {
+  color: #eee;
+  background-color: #004b4b;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: left; }
+  footer ul {
+    list-style: none; }
+
+/*# sourceMappingURL=styles.css.map */

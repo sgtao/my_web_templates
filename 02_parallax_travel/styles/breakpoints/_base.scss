@@ -1,0 +1,53 @@
+body,
+html {
+  font-family: "Arial", "メイリオ";
+  height: 100%;
+  margin: 0 auto;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto 0;
+}
+header {
+  color: #eee;
+  background-color:rgb(0, 75, 75);
+  display: block;
+  min-height: 150px;
+}
+main {
+  height: 100%;
+  min-height: 100%;
+  div {
+    box-sizing: border-box;
+    color: #FFF;
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    padding: 5%;
+  }
+  h2 {
+      font-family: 'Impact', "Arial";
+      font-size: 55px;
+      text-align: center;
+  }
+  h3 {
+      font-family: "Arial", "メイリオ";
+      font-size: 32px;
+      text-align: center;
+  }
+}
+footer {
+  color: #eee;
+  background-color:rgb(0, 75, 75);
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  ul {
+    list-style: none;
+  }
+
+}
